@@ -1,18 +1,20 @@
 package Client;
 
-	import java.awt.event.ActionEvent;
-	import java.awt.event.ActionListener;
-	import java.io.BufferedReader;
-	import java.io.InputStreamReader;
-	import java.io.PrintWriter;
-	import java.net.Socket;
+	import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 
-	import javax.swing.JFrame;
-	import javax.swing.JLabel;
-	import javax.swing.JPanel;
-	import javax.swing.JScrollPane;
-	import javax.swing.JTextArea;
-	import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 
 public class ClientFrame extends JFrame implements Runnable {
@@ -21,9 +23,9 @@ public class ClientFrame extends JFrame implements Runnable {
 		private JTextField nameField = new JTextField();
 		private JTextArea msgArea = new JTextArea();
 		private JTextField sendField = new JTextField();
+		private JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
 		private JButton button1=new JButton(" ");
 		private JButton button2=new JButton(" ");
-		private JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
 		private BufferedReader reader;
 		private PrintWriter writer;
 		private Socket socket;
@@ -40,12 +42,11 @@ public class ClientFrame extends JFrame implements Runnable {
 		    button1.setBounds(10, 10, 130, 132);
 			button2.setIcon(new javax.swing.ImageIcon("images/007.jpg"));
 			jpanel.add(button2);
-			button2.setBounds(180, 160, 130, 132);
-
+			button2.setBounds(180, 10, 130, 132);
 			jpanel.add(nameLabel);
 			nameLabel.setBounds(10, 160, 60, 20);
 			jpanel.add(nameField);
-			nameField.setBounds(60, 10, 270, 21);
+			nameField.setBounds(60, 160, 270, 21);
 			jpanel.add(sendField);
 			sendField.setBounds(10, 430, 320,21);
 			msgArea.setColumns(20);
