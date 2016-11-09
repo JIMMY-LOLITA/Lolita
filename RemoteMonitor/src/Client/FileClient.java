@@ -86,10 +86,14 @@
                   }
                   //下面进度条本为图形界面的prograssBar做的，这里如果是打文件，可能会重复打印出一些相同的百分比
                   System.out.println("文件接收了" +  (passedlen * 100/ len) + "%\n");
+
+                  
                   fileOut.write(buf, 0, read);
               }
               System.out.println("接收完成，文件存为" + savePath + "\n");
 
+            JOptionPane.showMessageDialog(newFrame.getContentPane(), "接收到文件,保存在了D盘!", "系统信息",
+                        JOptionPane.INFORMATION_MESSAGE);
               fileOut.close();
           } catch (Exception e) {
               System.out.println("接收消息错误" + "\n");
